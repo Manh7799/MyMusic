@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.container-fluid {
+  /* background-image: linear-gradient(to right, #edbdf5, #cc77f0); */
+  background-color: rgba(0, 0, 0, 0.726);
+  font-family: "Times New Roman", Times, serif;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 15px 20px;
+}
+
+.header_icon h4 {
+  color: white;
+  opacity: 0.7;
+  font-size: 30px;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header_menu ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+}
+
+.header_menu ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header_menu ul li:active{
+  opacity: 0.7;
+}
+
+.header_color{
+  border: 2px #313131 solid;
+  border-radius: 10px;
+}
+
+.header_setting {
+  text-align: right;
+  font-size: 25px;
+  padding-right: 30px !important;
+  cursor: pointer;
+}
+
+.user_icon{
+  padding-left: 10px;
+}
+
+/* Css bài hát */
+.container_songs {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.326);
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.container_songs:active {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .container_songs {
+    width: 50%;
+  }
+
+  .container_songs img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.song_value{
+  text-align: left;
+}
+
+.song_name {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  padding: 0 15px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song_singer{
+  font-size: 15px;
+  padding: 0 15px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song_img {
+  max-width: 50px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.icon_option {
+  position: absolute;
+  right: 20px;
+  margin: 0;
+}
+
+.active {
+  border: 2px solid black;
+}
+
+/* Css phần footer */
+body footer {
+  position: fixed;
+  width: 100%;
+  height: 15%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(25, 26, 27, 0.244);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_song {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_thumb {
+  background-image: url("./imgs/Mat_Ket_Noi.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgb(121, 82, 82);
+}
+
+.footer_song h4 {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  padding: 0 15px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .footer_thumb {
+    width: 100%;
+    height: 100%;
+  }
+  .footer_song h4 {
+    display: none;
+  }
+}
+
+/* Css phần nút */
+.show {
+  color: rgb(227, 189, 189) !important;
+}
+.footer_play {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.footer_play button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer_play .play_button {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Css phần thanh bar */
+.progress_bar {
+  width: 80%;
+  height: 5px;
+  appearance: none; /* Loại bỏ style mặc định của trình duyệt */
+  background: #313131;
+  border-radius: 5px;
+  outline: none; /* Loại bỏ viền khi focus */
+}
+
+.progress_bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #eee; /* Màu trắng cho nút kéo */
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+/* Css phần âm lượng */
+.footer_volume {
+  display: flex;
+  align-items: center;
+}
+
+.footer_volume button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer_volume input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  height: 5px;
+  background: rgb(169, 169, 169);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer_volume input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.footer_value_volume{
+  margin-bottom: -14px;
+}
+
+#value {
+  padding: 5px;
+  color: white;
+  
+}

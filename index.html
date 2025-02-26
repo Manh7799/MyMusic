@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Music website</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="row">
+        <div class="col-2 header header_icon">
+          <h4>Music</h4>
+        </div>
+        <div class="col-6 header header_menu">
+          <ul>
+            <li class="header_color">Thư viện</li>
+            <li>Khám phá</li>
+            <li>Tìm kiếm</li>
+          </ul>
+        </div>
+        <div class="col-4 header header_setting">
+          <i class="fa-solid fa-gear setting_icon"></i>
+          <i class="fa-solid fa-user user_icon"></i>
+        </div>
+      </header>
+      <div class="container">
+        <div class="container_conten">
+          <div class="row justify-content-around container_playlist">
+            
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3 footer_song">
+              <div class="footer_thumb"></div>
+              <h4>Mất kết nối</h4>
+            </div>
+            <div class="col-sm-6 footer_play">
+              <div>
+                <button class="shuffle_button">
+                  <i class="fa-solid fa-shuffle"></i>
+                </button>
+                <button class="back_button">
+                  <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="play_button">
+                  <i class="fa-solid fa-play icon icon_play"></i>
+                  <i class="fa-solid fa-stop icon icon_stop hidden"></i>
+                </button>
+                <button class="next_button">
+                  <i class="fa-solid fa-forward"></i>
+                </button>
+                <button class="repeat_button">
+                  <i class="fa-solid fa-repeat"></i>
+                </button>
+              </div>
+              <input
+                type="range"
+                class="progress_bar"
+                min="0"
+                max="100"
+                value="0"
+                step="1"
+              />
+              <audio id="audio" src=""></audio>
+            </div>
+            <div class="col-sm-3 footer_volume">
+              <button><i class="fa-solid fa-volume-high"></i></button>
+              <input id="volume" type="range" class="volume" min="0" max="100" value="0" />
+              <div class="footer_value_volume">
+                <p> <output id="value"></output></p>
+              </div>
+              <!-- <button><i class="fa-regular fa-heart"></i></button> -->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
